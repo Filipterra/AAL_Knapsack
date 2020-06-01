@@ -1,0 +1,8 @@
+*.o
+*.code-workspace
+.vscode/
+*.dblite
+*.a
+*.lib
+*.sconsign.dblite
+~$*
