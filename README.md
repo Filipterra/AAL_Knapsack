@@ -1,2 +1,5 @@
 # AAL_Knapsack
-Simple comparison of basic knapsack problem solving algorithms
+Porównanie prostych algorytmów rozwiązywania problemu plecakowego z ograniczoną liczbą przedmiotów: brutalnego i prostego dynamicznego.
+
+Implementacja w C++.
+Dokładny opis w "Koncepcji".
