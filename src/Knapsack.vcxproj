@@ -152,6 +152,8 @@
     <ClCompile Include="Dynamic.cpp" />
     <ClCompile Include="Knapsack.cpp" />
     <ClCompile Include="Solution.cpp" />
+    <ClCompile Include="TestDataGenerator.cpp" />
+    <ClCompile Include="TestModule.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Brutal.h" />
@@ -159,6 +161,7 @@
     <ClInclude Include="Dynamic.h" />
     <ClInclude Include="Solution.h" />
     <ClInclude Include="TestDataGenerator.h" />
+    <ClInclude Include="TestModule.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
