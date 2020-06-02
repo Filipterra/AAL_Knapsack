@@ -6,7 +6,12 @@
  * 
  */
 
+#ifndef KNAPSACK_DATA_H
+#define KNAPSACK_DATA_H
+
+#include <limits>
 #include <vector>
+#include <algorithm>
 
 /**
  * @brief Namespace for Knapsack project objects
@@ -15,7 +20,7 @@
 namespace Knapsack {
 
     using ValueType = float;
-    using VolumeType = int;
+    using VolumeType = unsigned int;
 
     /**
      * @brief Pair type of object value and volume
@@ -41,13 +46,13 @@ namespace Knapsack {
          * @brief Number of objects
          * 
          */
-        int object_count_;
+        unsigned int object_count_;
 
         /**
          * @brief Number of times the same object can be used
          * 
          */
-        int max_copies_;
+        unsigned int max_copies_;
 
         /**
          * @brief Container for objects
@@ -56,6 +61,12 @@ namespace Knapsack {
         ObjectContainer objects_;
 
     public:
+
+        /**
+         * @brief static variable for MAX_VALUE variation of set ValueType
+         * 
+         */
+        static const ValueType MAX_VALUE_TYPE;
 
         /**
          * @brief Construct a new Data object
@@ -111,14 +122,14 @@ namespace Knapsack {
          * 
          * @param count new object count
          */
-        void setObjectCount(int count);
+        void setObjectCount(unsigned int count);
 
         /**
          * @brief Set the Max Copies value
          * 
          * @param count new max copies
          */
-        void setMaxCopies(int count);
+        void setMaxCopies(unsigned int count);
 
         /**
          * @brief Set the Objects container and object count
@@ -163,21 +174,21 @@ namespace Knapsack {
          * 
          * @return const int& 
          */
-        const int& getObjectCount() const;
+        const unsigned int& getObjectCount() const;
 
         /**
          * @brief Get the Max Copies value
          * 
          * @return const int& 
          */
-        const int& getMaxCopies() const;
+        const unsigned int& getMaxCopies() const;
 
         /**
          * @brief Get the Objects container for modyfication
          * 
          * @return ObjectContainer& 
          */
-        ObjectContainer& getObjects() const;
+        ObjectContainer& getObjects();
 
         /**
          * @brief Get the constant Objects container
@@ -192,7 +203,7 @@ namespace Knapsack {
          * @param index index of the object
          * @return ObjectValues& object reference
          */
-        ObjectValues& getObject(int index) const;
+        ObjectValues& getObject(int index);
 
         /**
          * @brief Get the constant object from given index in container
@@ -205,3 +216,5 @@ namespace Knapsack {
     };
 
 }
+
+#endif

@@ -147,7 +147,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Brutal.cpp" />
+    <ClCompile Include="Data.cpp" />
+    <ClCompile Include="Dynamic.cpp" />
     <ClCompile Include="Knapsack.cpp" />
+    <ClCompile Include="Solution.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Brutal.h" />
+    <ClInclude Include="Data.h" />
+    <ClInclude Include="Dynamic.h" />
+    <ClInclude Include="Solution.h" />
+    <ClInclude Include="TestDataGenerator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
