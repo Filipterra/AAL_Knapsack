@@ -9,13 +9,10 @@
 #ifndef KNAPSACK_SOLUTION_H
 #define KNAPSACK_SOLUTION_H
 
-#include <memory>
 #include <stdexcept>
 #include "Data.h"
 
 namespace Knapsack {
-
-    using DataPointer = std::shared_ptr<Data>;
 
     /**
      * @brief Solution class
@@ -107,6 +104,15 @@ namespace Knapsack {
         Solution operator=(Solution&& other);
 
         /**
+         * @brief print solution values to stream
+         * 
+         * @param os stream
+         * @param solution solution object
+         * @return std::ostream& same stream
+         */
+        friend std::ostream& operator<<(std::ostream& os, const Solution& solution);
+
+        /**
          * @brief Set the reached value
          * 
          * @param value new reached value
@@ -139,14 +145,14 @@ namespace Knapsack {
          * 
          * @return ValueType reached value
          */
-        ValueType getValue();
+        const ValueType getValue() const;
 
         /**
          * @brief Get the used volume
          * 
          * @return VolumeType used volume
          */
-        VolumeType getVolume();
+        const VolumeType getVolume() const;
 
         /**
          * @brief Get the problem data
@@ -156,11 +162,25 @@ namespace Knapsack {
         DataPointer getData();
 
         /**
+         * @brief Get the problem data
+         * 
+         * @return DataPointer problem data
+         */
+        const DataPointer& getDataConst() const;
+
+        /**
          * @brief Get the Used Copies vector
          * 
          * @return std::vector<unsigned int>& Used Copies vector
          */
         std::vector<unsigned int>& getUsedCopies();
+
+        /**
+         * @brief Get the Used Copies vector
+         * 
+         * @return std::vector<unsigned int>& Used Copies vector
+         */
+        const std::vector<unsigned int>& getUsedCopiesConst() const;
 
         /**
          * @brief clear solution data

@@ -40,6 +40,19 @@ Solution Solution::operator=(Solution&& other) {
     return *this;
 }
 
+std::ostream& operator<<(std::ostream& os, const Solution& solution) {
+    printBasicData(os, *(solution.getDataConst()));
+    os << "Value: " << solution.getValue() << "\t" << "Used volume: " << solution.getVolume() << "\npi: \tci: \tmi: \n";
+
+    for (unsigned int i=0; i<solution.getDataConst()->getObjectCount(); ++i)
+    {
+        os << solution.getDataConst()->getObjectConst(i).first << "\t" << solution.getDataConst()->getObjectConst(i).second << "\t"
+        << solution.getUsedCopiesConst()[i] << "\n";
+    }
+
+    return os;
+}
+
 void Solution::setValue (ValueType value) {
     value_ = value;
 }
@@ -56,11 +69,11 @@ void Solution::setUsedCopies (std::vector<unsigned int>& used_copies) {
     used_copies_ = used_copies;
 }
 
-ValueType Solution::getValue() {
+const ValueType Solution::getValue() const {
     return value_;
 }
 
-VolumeType Solution::getVolume() {
+const VolumeType Solution::getVolume() const {
     return used_volume_;
 }
 
@@ -68,7 +81,15 @@ DataPointer Solution::getData() {
     return data_;
 }
 
+const DataPointer& Solution::getDataConst() const {
+    return data_;
+}
+
 std::vector<unsigned int>& Solution::getUsedCopies() {
+    return used_copies_;
+}
+
+const std::vector<unsigned int>& Solution::getUsedCopiesConst() const {
     return used_copies_;
 }
 

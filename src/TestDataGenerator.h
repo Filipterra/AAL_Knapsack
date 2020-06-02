@@ -9,12 +9,13 @@
 #ifndef KNAPSACK_TEST_DATA_GENERATOR_H
 #define KNAPSACK_TEST_DATA_GENERATOR_H
 
+#include <ctime>
 #include "Data.h"
 
 namespace Knapsack {
 
     /**
-     * @brief Class generating problem data
+     * @brief Class generating problem data. Not for usage as an object. Just for static methods.
      * 
      */
     class TestDataGenerator {
@@ -22,47 +23,29 @@ namespace Knapsack {
 
     public:
 
-        /**
-         * @brief Construct a new TestDataGenerator object
-         * 
-         */
-        TestDataGenerator();
+        TestDataGenerator() = delete;
+
+        TestDataGenerator(const TestDataGenerator& other) = delete;
+
+        TestDataGenerator(TestDataGenerator&& other) = delete;
+
+        ~TestDataGenerator() = delete;
+
+        TestDataGenerator operator=(const TestDataGenerator& other) = delete;
+
+        TestDataGenerator operator=(TestDataGenerator&& other) = delete;
 
         /**
-         * @brief Construct a new TestDataGenerator object by copying another
+         * @brief Generate new problem data with given parameters. Rest of the values derive from those.
          * 
-         * @param other object to copy
+         * @param object_count number of objects in problem
+         * @param max_copies maximum number of copies of each object that can be used in the solution
+         * @param volume_range maximum value of volume of an object
+         * @param instance test data instance number
+         * @param instance_count number of test data instances beeing generated in this batch
+         * @return DataPointer pointer to generated problem data
          */
-        TestDataGenerator(const TestDataGenerator& other);
-
-        /**
-         * @brief Construct a new TestDataGenerator object by moving another
-         * 
-         * @param other object to move
-         */
-        TestDataGenerator(TestDataGenerator&& other);
-
-        /**
-         * @brief Destroy the TestDataGenerator object
-         * 
-         */
-        ~TestDataGenerator();
-
-        /**
-         * @brief Copying assigment operator
-         * 
-         * @param other object to copy
-         * @return TestDataGenerator object with copied values
-         */
-        TestDataGenerator operator=(const TestDataGenerator& other);
-
-        /**
-         * @brief Moving assigment operator
-         * 
-         * @param other object to move
-         * @return TestDataGenerator object with moved values
-         */
-        TestDataGenerator operator=(TestDataGenerator&& other);
+        static DataPointer generate(int object_count, int max_copies, VolumeType volume_range, int instance, int instance_count);
 
     };
 

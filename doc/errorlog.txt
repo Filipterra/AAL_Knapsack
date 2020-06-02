@@ -1,0 +1,9 @@
+C:/Users/Admin/Documents/Studies/S5/AAL/AAL_Knapsack/src/Data.cpp:13: warning: Member MAX_VALUE_TYPE (variable) of file Data.cpp is not documented.
+C:/Users/Admin/Documents/Studies/S5/AAL/AAL_Knapsack/src/Data.h:24: warning: Member ValueType (typedef) of namespace Knapsack is not documented.
+C:/Users/Admin/Documents/Studies/S5/AAL/AAL_Knapsack/src/Data.h:25: warning: Member VolumeType (typedef) of namespace Knapsack is not documented.
+C:/Users/Admin/Documents/Studies/S5/AAL/AAL_Knapsack/src/Data.h:33: warning: Member ObjectContainer (typedef) of namespace Knapsack is not documented.
+C:/Users/Admin/Documents/Studies/S5/AAL/AAL_Knapsack/src/Data.h:237: warning: Member DataPointer (typedef) of namespace Knapsack is not documented.
+C:/Users/Admin/Documents/Studies/S5/AAL/AAL_Knapsack/src/Data.h:24: warning: Member ValueType (typedef) of namespace Knapsack is not documented.
+C:/Users/Admin/Documents/Studies/S5/AAL/AAL_Knapsack/src/Data.h:25: warning: Member VolumeType (typedef) of namespace Knapsack is not documented.
+C:/Users/Admin/Documents/Studies/S5/AAL/AAL_Knapsack/src/Data.h:33: warning: Member ObjectContainer (typedef) of namespace Knapsack is not documented.
+C:/Users/Admin/Documents/Studies/S5/AAL/AAL_Knapsack/src/Data.h:237: warning: Member DataPointer (typedef) of namespace Knapsack is not documented.

@@ -12,6 +12,8 @@
 #include <limits>
 #include <vector>
 #include <algorithm>
+#include <memory>
+#include <ostream>
 
 /**
  * @brief Namespace for Knapsack project objects
@@ -109,6 +111,23 @@ namespace Knapsack {
          * @return Data object with moved values
          */
         Data operator=(Data&& other);
+
+        /**
+         * @brief print data values to stream
+         * 
+         * @param os stream
+         * @param data data object
+         * @return std::ostream& same stream
+         */
+        friend std::ostream& operator<<(std::ostream& os, const Data& data);
+
+        /**
+         * @brief print to stream without all of the objects' data
+         * 
+         * @param os stream
+         * @param data data object
+         */
+        friend void printBasicData(std::ostream& os, const Data& data);
 
         /**
          * @brief Set the Volume value
@@ -214,6 +233,8 @@ namespace Knapsack {
         const ObjectValues& getObjectConst(int index) const;
 
     };
+
+    using DataPointer = std::shared_ptr<Data>;
 
 }
 
