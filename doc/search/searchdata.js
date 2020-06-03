@@ -4,10 +4,11 @@ var indexSectionsWithContent =
   1: "bdst",
   2: "k",
   3: "bdkst",
-  4: "abcdgimoprs~",
+  4: "abcdgimoprst~",
   5: "dmosuv",
   6: "o",
-  7: "op"
+  7: "a",
+  8: "op"
 };
 
 var indexSectionNames =
@@ -19,7 +20,8 @@ var indexSectionNames =
   4: "functions",
   5: "variables",
   6: "typedefs",
-  7: "related"
+  7: "enums",
+  8: "related"
 };
 
 var indexSectionLabels =
@@ -31,6 +33,7 @@ var indexSectionLabels =
   4: "Functions",
   5: "Variables",
   6: "Typedefs",
-  7: "Friends"
+  7: "Enumerations",
+  8: "Friends"
 };
 

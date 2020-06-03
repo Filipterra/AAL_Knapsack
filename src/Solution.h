@@ -65,7 +65,7 @@ namespace Knapsack {
          * 
          * @param other object to copy
          */
-        Solution(Solution& other);
+        Solution(const Solution& other);
 
         /**
          * @brief Construct a new Solution object by moving another

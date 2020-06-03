@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['_7ebrutal_119',['~Brutal',['../class_knapsack_1_1_brutal.html#ae7412e56b7323e3dbc206fb1b7fe35b5',1,'Knapsack::Brutal']]],
-  ['_7edata_120',['~Data',['../class_knapsack_1_1_data.html#aab31956423290f0d62dcca47ab4d16dd',1,'Knapsack::Data']]],
-  ['_7edynamic_121',['~Dynamic',['../class_knapsack_1_1_dynamic.html#a6f4b47c15d29ce25dd98902800329f50',1,'Knapsack::Dynamic']]],
-  ['_7esolution_122',['~Solution',['../class_knapsack_1_1_solution.html#a5d245f7409aacf6ace5e965b7879a580',1,'Knapsack::Solution']]]
+  ['teoreticbrutal_150',['teoreticBrutal',['../class_knapsack_1_1_test_module.html#a90c47c9c25fd2a75b98af8dc39e338c8',1,'Knapsack::TestModule']]],
+  ['teoreticdynamic_151',['teoreticDynamic',['../class_knapsack_1_1_test_module.html#a380d7bf6308bf665281af5dc55927854',1,'Knapsack::TestModule']]],
+  ['testmodule_152',['TestModule',['../class_knapsack_1_1_test_module.html#a3178d5c3ae3a47afe7786f1637a9e09e',1,'Knapsack::TestModule::TestModule(std::initializer_list&lt; unsigned int &gt; object_numbers={50, 100, 200, 500, 1000, 2000}, std::initializer_list&lt; unsigned int &gt; max_copy_numbers={2, 3, 5}, std::initializer_list&lt; VolumeType &gt; volume_ranges={1000, 10000})'],['../class_knapsack_1_1_test_module.html#ae07647e87bc5d53c060c474aa40abd48',1,'Knapsack::TestModule::TestModule(const TestModule &amp;other)'],['../class_knapsack_1_1_test_module.html#a9b928917dd8828fe0103e832925d42fb',1,'Knapsack::TestModule::TestModule(TestModule &amp;&amp;other)']]]
 ];

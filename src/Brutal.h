@@ -52,7 +52,7 @@ namespace Knapsack {
      * 
      * @param other object to copy
      */
-    Brutal(Brutal& other);
+    Brutal(const Brutal& other);
 
     /**
      * @brief Construct a new Brutal object moving from another

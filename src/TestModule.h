@@ -10,9 +10,19 @@
 #define KNAPSACK_TEST_MODULE_H
 
 #include <chrono>
+#include <iostream>
+#include <cmath>
 #include "TestDataGenerator.h"
+#include "Brutal.h"
+#include "Dynamic.h"
 
 namespace Knapsack {
+
+    /**
+     * @brief Algorithm types
+     * 
+     */
+    enum class Algorithm { DYNAMIC, BRUTAL };
 
     /**
      * @brief Class for testing Knapsack problem algorithms
@@ -53,7 +63,7 @@ namespace Knapsack {
      * 
      * @param other object to copy
      */
-    TestModule(TestModule& other);
+    TestModule(const TestModule& other);
 
     /**
      * @brief Construct a new TestModule object moving from another
@@ -169,20 +179,48 @@ namespace Knapsack {
     void addVolumeRange(VolumeType volume_range);
 
     /**
-     * @brief Run one test, measure time and print results.
+     * @brief Generate data, run one test, measure time and print results.
      * 
+     * @tparam Algorithm choose solving algorithm
      * @param object_count number of objects to be generated
      * @param max_copies max number of copies of each object
      * @param volume_range range for volume randomization
      */
-    void run(int object_count, int max_copies, VolumeType volume_range);
+    template <Algorithm algorithm = Algorithm::DYNAMIC> void run(unsigned int object_count, unsigned int max_copies, VolumeType volume_range);
+
+    /**
+     * @brief Run one test, measure time and print results.
+     * 
+     * @tparam Algorithm choose solving algorithm
+     * @param data problem data
+     */
+    template <Algorithm algorithm = Algorithm::DYNAMIC> void run(DataPointer data);
 
     /**
      * @brief Run tests for each combination of hold values instance_count times, measure mean time and print results.
      * 
+     * @tparam Algorithm choose solving algorithm
      * @param instance_count number of times each test is repeated with different data
      */
-    void runBatch(int instance_count);
+    template <Algorithm algorithm = Algorithm::DYNAMIC> void runBatch(unsigned int instance_count = 100);
+
+    /**
+     * @brief helper function for calculating teoretical complexity of the brutal algorithm
+     * 
+     * @param objects number of objects
+     * @param max_copies maximum number of copies of each object
+     * @return long long long long value for comparison
+     */
+    inline long long teoreticBrutal(unsigned int objects, unsigned int max_copies);
+
+    /**
+     * @brief helper function for calculating teoretical complexity of the dynamic algorithm
+     * 
+     * @param objects number of objects
+     * @param volume volume of knapsack
+     * @return long long value for comparison
+     */
+    inline long long teoreticDynamic(unsigned int objects, VolumeType volume);
     
     };
 

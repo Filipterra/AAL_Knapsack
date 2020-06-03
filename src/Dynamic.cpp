@@ -16,7 +16,7 @@ Dynamic::Dynamic() {
     solution_.setData(nullptr);
 };
 
-Dynamic::Dynamic(Dynamic& other): solution_(other.solution_) {};
+Dynamic::Dynamic(const Dynamic& other): solution_(other.solution_) {};
 
 Dynamic::Dynamic(Dynamic&& other): solution_(std::move(other.solution_)) {};
 

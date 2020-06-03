@@ -39,7 +39,7 @@ namespace Knapsack {
      * 
      * @param other object to copy
      */
-    Dynamic(Dynamic& other);
+    Dynamic(const Dynamic& other);
 
     /**
      * @brief Construct a new Dynamic object moving from another

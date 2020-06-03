@@ -16,7 +16,7 @@ Brutal::Brutal() {
     solution_.setData(nullptr);
 };
 
-Brutal::Brutal(Brutal& other): solution_(other.solution_) {};
+Brutal::Brutal(const Brutal& other): solution_(other.solution_) {};
 
 Brutal::Brutal(Brutal&& other): solution_(std::move(other.solution_)) {};
 

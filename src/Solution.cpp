@@ -12,7 +12,7 @@ using namespace Knapsack;
 
 Solution::Solution(): value_(0), used_volume_(0) {};
 
-Solution::Solution(Solution& other): value_(other.value_), used_volume_(other.used_volume_),
+Solution::Solution(const Solution& other): value_(other.value_), used_volume_(other.used_volume_),
 data_(other.data_), used_copies_(other.used_copies_) {};
 
 Solution::Solution(Solution&& other): value_(std::move(other.value_)), used_volume_(std::move(other.used_volume_)),
