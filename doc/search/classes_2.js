@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['solution_87',['Solution',['../class_knapsack_1_1_solution.html',1,'Knapsack']]]
+  ['data_91',['Data',['../class_knapsack_1_1_data.html',1,'Knapsack']]],
+  ['dynamic_92',['Dynamic',['../class_knapsack_1_1_dynamic.html',1,'Knapsack']]]
 ];

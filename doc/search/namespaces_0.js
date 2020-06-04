@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['knapsack_90',['Knapsack',['../namespace_knapsack.html',1,'']]]
+  ['knapsack_96',['Knapsack',['../namespace_knapsack.html',1,'']]]
 ];

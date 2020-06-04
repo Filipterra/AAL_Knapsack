@@ -1,0 +1,17 @@
+#       Knapsack
+#       Author: Przybysz Filip
+#
+
+Import('env')
+
+cppFiles = [
+    'Brutal.cpp',
+    'CommandInterpreter.cpp',
+    'Data.cpp',
+    'Dynamic.cpp',
+    'Solution.cpp',
+    'TestDataGenerator.cpp',
+    'TestModule.cpp'
+]
+
+env.StaticLibrary('knapsack', cppFiles)

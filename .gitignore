@@ -1,4 +1,6 @@
 *.o
+*.obj
+*.exe
 *.code-workspace
 .vscode/
 *.dblite
@@ -6,3 +8,4 @@
 *.lib
 *.sconsign.dblite
 ~$*
+Knapsack

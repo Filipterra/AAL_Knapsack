@@ -41,7 +41,7 @@ Data Data::operator=(Data&& other) {
 std::ostream& operator<<(std::ostream& os, const Data& data) {
     os << "C: " << data.getVolume() << "\tm: " << data.getMaxCopies() << "\tn: " << data.getObjectCount() << "\npi: \tci: \n";
 
-    std::for_each(data.getObjectsConst().begin(), data.getObjectsConst().end(), [&](ObjectValues& object){ os << object.first << "\t" << object.second; });
+    std::for_each(data.getObjectsConst().begin(), data.getObjectsConst().end(), [&](const ObjectValues& object){ os << object.first << "\t" << object.second; });
 
     return os;
 }

@@ -11,8 +11,8 @@
 
 using namespace Knapsack;
 
-    TestModule::TestModule(std::initializer_list<unsigned int> object_numbers = {50, 100, 200, 500, 1000, 2000}, 
-    std::initializer_list<unsigned int> max_copy_numbers = {2, 3, 5}, std::initializer_list<VolumeType> volume_ranges = {1000, 10000}) {
+    TestModule::TestModule(std::initializer_list<unsigned int> object_numbers, 
+    std::initializer_list<unsigned int> max_copy_numbers, std::initializer_list<VolumeType> volume_ranges) {
         object_numbers_ = object_numbers;
         max_copy_numbers_ = max_copy_numbers;
         volume_ranges_ = volume_ranges;
