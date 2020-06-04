@@ -32,8 +32,9 @@ namespace Knapsack {
          * @brief Act accordingly to command
          * 
          * @tparam command 
+         * @tparam algorithm 
          */
-        template <Commands command> static void runCommand();
+        template <Commands command, Algorithm algorithm> static void runCommand();
 
     public:
 
@@ -54,7 +55,7 @@ namespace Knapsack {
          * 
          * @param command execution argument
          */
-        static void interprete (std::string command);
+        static void interprete (std::string command, std::string algorithm);
     };
 }
 

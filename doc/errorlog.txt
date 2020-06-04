@@ -7,3 +7,5 @@ C:/Users/Admin/Documents/Studies/S5/AAL/AAL_Knapsack/src/Data.h:24: warning: Mem
 C:/Users/Admin/Documents/Studies/S5/AAL/AAL_Knapsack/src/Data.h:25: warning: Member VolumeType (typedef) of namespace Knapsack is not documented.
 C:/Users/Admin/Documents/Studies/S5/AAL/AAL_Knapsack/src/Data.h:33: warning: Member ObjectContainer (typedef) of namespace Knapsack is not documented.
 C:/Users/Admin/Documents/Studies/S5/AAL/AAL_Knapsack/src/Data.h:237: warning: Member DataPointer (typedef) of namespace Knapsack is not documented.
+C:/Users/Admin/Documents/Studies/S5/AAL/AAL_Knapsack/src/CommandInterpreter.h:58: warning: The following parameter of Knapsack::CommandInterpreter::interprete(std::string command, std::string algorithm) is not documented:
+  parameter 'algorithm'

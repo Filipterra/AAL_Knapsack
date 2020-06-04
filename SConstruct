@@ -4,6 +4,8 @@
 
 print('..Building App')
 
+binFolder = '#bin/'
+
 pathToFiles = [
     'src'
 ]
@@ -33,14 +35,14 @@ else:
     print( 'Unsupported OS. Exiting.')
     Exit(1)
 
-SConscript('src/SConscript', exports = 'env', duplicate = 0)
+SConscript('src/SConscript', exports = 'env', variant_dir = binFolder, duplicate = 0)
 
 env.Append(
     LIBS = [
         'knapsack'
     ],
 
-    LIBPATH = pathToFiles
+    LIBPATH = binFolder
 
 )
 
