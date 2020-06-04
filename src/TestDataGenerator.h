@@ -45,7 +45,7 @@ namespace Knapsack {
          * @param instance_count number of test data instances beeing generated in this batch
          * @return DataPointer pointer to generated problem data
          */
-        static DataPointer generate(int object_count, int max_copies, VolumeType volume_range, unsigned int instance, unsigned int instance_count);
+        static DataPointer generate(unsigned int object_count, unsigned int max_copies, VolumeType volume_range, unsigned int instance, unsigned int instance_count);
 
     };
 

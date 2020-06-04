@@ -83,7 +83,7 @@ namespace Knapsack {
      * @param data data for the problem
      * @return const Solution& found solution
      */
-    const Solution& run(DataPointer data) throw(std::invalid_argument);
+    const Solution& run(DataPointer data);
     
     };
 

@@ -65,10 +65,10 @@ namespace Knapsack {
     public:
 
         /**
-         * @brief static variable for MAX_VALUE variation of set ValueType
+         * @brief static variable for MIN_VALUE variation of set ValueType
          * 
          */
-        static const ValueType MAX_VALUE_TYPE;
+        static const ValueType MIN_VALUE_TYPE;
 
         /**
          * @brief Construct a new Data object

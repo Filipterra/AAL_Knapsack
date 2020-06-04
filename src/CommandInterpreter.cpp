@@ -15,7 +15,7 @@ template<> void CommandInterpreter::runCommand<Commands::HELP, Algorithm::DYNAMI
     << "with provided parameters\n-test -- solve knapsack problem from test problem data generated from preprogrammed parameters\n\n"
     << "Accepted <algorithm> values:\t-brutal\t-dynamic\n\n\n"
     << "Execution methods:\n\nKnapsack -help\n\nKnapsack -run -<algorithm> -- in next line followed by values of: knapsack volume, number of objects,"
-    << "maximum nuber of copies; in next lines provide pairs of object value and object volume\n\tExample:\n\t\tKnapsack -run -dynamic\n\t\t10 2 3\n\t\t2 3\n\t\t3 1\n\t\t5 8\n\n"
+    << "maximum nuber of copies; in next lines provide pairs of object value and object volume\n\tExample:\n\t\tKnapsack -run -dynamic\n\t\t10 2 3\n\t\t2 3\n\t\t3 1\n\n"
     << "Knapsack -generate -<algorithm> -- in next line followed by generator values of: number of objects, maximum nuber of copies, object volume value range\n\tExample:\n\t\t"
     << "Knapsack -generate -dynamic\n\t\t10 2 100\n\n"
     << "Knapsack -test -<algorithm>\n\n";
@@ -38,7 +38,7 @@ template<> void CommandInterpreter::runCommand<Commands::RUN, Algorithm::BRUTAL>
         data->setMaxCopies(copies_number);
         data->setVolume(knapsack_volume);
 
-        for (int i=0; i<objects_number; ++i) {
+        for (unsigned int i=0; i<objects_number; ++i) {
 
             std::cin >> object_value >> object_volume;
             data->addObject(object_value, object_volume);
@@ -63,7 +63,7 @@ template<> void CommandInterpreter::runCommand<Commands::RUN, Algorithm::DYNAMIC
         data->setMaxCopies(copies_number);
         data->setVolume(knapsack_volume);
 
-        for (int i=0; i<objects_number; ++i) {
+        for (unsigned int i=0; i<objects_number; ++i) {
 
             std::cin >> object_value >> object_volume;
             data->addObject(object_value, object_volume);

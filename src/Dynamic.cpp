@@ -57,7 +57,7 @@ const Solution& Dynamic::run(DataPointer data) {
             best_solutions[j]=best_solutions[j-1];
 
             //check if taking each element would make for a better solution
-            for (int i=0; i<data->getObjectCount(); ++i)
+            for (unsigned int i=0; i<data->getObjectCount(); ++i)
             {
                 //for clarity
                 ValueType i_object_value = data->getObjectConst(i).first;

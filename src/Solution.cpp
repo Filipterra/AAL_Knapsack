@@ -40,8 +40,9 @@ Solution Solution::operator=(Solution&& other) {
     return *this;
 }
 
-std::ostream& Knapsack::operator<<(std::ostream& os, const Solution& solution) {
-    Knapsack::printBasicData(os, *(solution.getDataConst()));
+namespace Knapsack {
+std::ostream& operator<<(std::ostream& os, const Solution& solution) {
+    printBasicData(os, *(solution.getDataConst()));
     os << "Value: " << solution.getValue() << "\t" << "Used volume: " << solution.getVolume() << "\npi: \tci: \tmi: \n";
 
     for (unsigned int i=0; i<solution.getDataConst()->getObjectCount(); ++i)
@@ -51,6 +52,7 @@ std::ostream& Knapsack::operator<<(std::ostream& os, const Solution& solution) {
     }
 
     return os;
+}
 }
 
 void Solution::setValue (ValueType value) {
@@ -106,7 +108,7 @@ void Solution::calculateValues() {
     value_ = 0;
     used_volume_ = 0;
 
-    for (int i=0; i<used_copies_.size(); ++i)
+    for (unsigned int i=0; i<used_copies_.size(); ++i)
     {
         value_ += data_->getObject(i).first * used_copies_[i];
         used_volume_ += data_->getObject(i).second * used_copies_[i];

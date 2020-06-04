@@ -38,7 +38,7 @@ namespace Knapsack {
      * @param max_value Should start with minimal possible value of ValueType. Shared between recursions. Updated when better solution is found.
      * @param solution Should start with vector of size = object_count filled with 0's. Shared between recursions. Updated when better solution is found.
      */
-    void generateVariation (int position, ValueType value, int volume, const int& object_count, const int& max_copies, ValueType& max_value, std::vector<unsigned int>& solution);
+    void generateVariation (int position, ValueType value, VolumeType volume, const unsigned int& object_count, const unsigned int& max_copies, ValueType& max_value, std::vector<unsigned int>& solution);
 
     public:
 
@@ -97,7 +97,7 @@ namespace Knapsack {
      * @param data data for the problem
      * @return const Solution& found solution
      */
-    const Solution& run(DataPointer data) throw(std::invalid_argument);
+    const Solution& run(DataPointer data);
     
     };
 

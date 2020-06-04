@@ -11,7 +11,7 @@
 
 using namespace Knapsack;
 
-DataPointer TestDataGenerator::generate(int object_count, int max_copies, VolumeType volume_range, unsigned int instance, unsigned int instance_count) {
+DataPointer TestDataGenerator::generate(unsigned int object_count, unsigned int max_copies, VolumeType volume_range, unsigned int instance, unsigned int instance_count) {
 
     DataPointer data = std::make_shared<Data>();
     
@@ -22,7 +22,7 @@ DataPointer TestDataGenerator::generate(int object_count, int max_copies, Volume
     ValueType value = 0;
     VolumeType volume = 0, volume_sum = 0; 
     //randomize object values
-    for (int i=0; i< object_count; ++i)
+    for (unsigned int i = 0; i < object_count; ++i)
     {
         volume = (rand() % volume_range) + 1; //random volume
         value = volume + volume_range/10; //value strongly correlated with volume

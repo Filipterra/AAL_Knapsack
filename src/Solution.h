@@ -192,7 +192,7 @@ namespace Knapsack {
          * @brief calculate and set value and used volume based on problem data and used copies
          * 
          */
-        void calculateValues() throw(std::invalid_argument);
+        void calculateValues();
 
         /**
          * @brief check if solution is valid

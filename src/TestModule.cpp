@@ -91,7 +91,7 @@ using namespace Knapsack;
         std::sort(volume_ranges_.begin(), volume_ranges_.end());
     }
 
-    template<> static void TestModule::run<Algorithm::DYNAMIC>(unsigned int object_count, unsigned int max_copies, VolumeType volume_range) {
+    template<> void TestModule::run<Algorithm::DYNAMIC>(unsigned int object_count, unsigned int max_copies, VolumeType volume_range) {
 
         //generate data instance
         auto data = TestDataGenerator::generate(object_count, max_copies, volume_range, 1, 1);
@@ -118,7 +118,7 @@ using namespace Knapsack;
         std::cout << solution;
     }
 
-    template<> static void TestModule::run<Algorithm::BRUTAL>(unsigned int object_count, unsigned int max_copies, VolumeType volume_range) {
+    template<> void TestModule::run<Algorithm::BRUTAL>(unsigned int object_count, unsigned int max_copies, VolumeType volume_range) {
         
         //generate data instance
         auto data = TestDataGenerator::generate(object_count, max_copies, volume_range, 1, 1);
@@ -145,7 +145,7 @@ using namespace Knapsack;
         std::cout << solution;
     }
 
-    template<> static void TestModule::run<Algorithm::DYNAMIC>(DataPointer data) {
+    template<> void TestModule::run<Algorithm::DYNAMIC>(DataPointer data) {
         
         Dynamic solver = Dynamic();
         
@@ -169,7 +169,7 @@ using namespace Knapsack;
         std::cout << solution;
     }
 
-    template<> static void TestModule::run<Algorithm::BRUTAL>(DataPointer data) {
+    template<> void TestModule::run<Algorithm::BRUTAL>(DataPointer data) {
         
         Brutal solver = Brutal();
 
@@ -213,7 +213,7 @@ using namespace Knapsack;
                         {
                             mean_time = 0;
                             mean_teoretic_time = 0;
-                            for (int i=1; i<=instance_count; ++i)
+                            for (unsigned int i=1; i<=instance_count; ++i)
                             {
                                 //generate data
                                 auto data = TestDataGenerator::generate(object_numbers_[a], max_copy_numbers_[b], volume_ranges_[c], i, instance_count);
@@ -239,14 +239,14 @@ using namespace Knapsack;
 
         std::vector<double> estimates;
         //calculate how well the results fit the teoretical assumptions
-        for (int i = 0; i<object_numbers_.size(); ++i)
+        for (unsigned int i = 0; i<object_numbers_.size(); ++i)
         {
             estimates.push_back( (teoretic_object_number_mean_time[i] * object_number_mean_time[object_numbers_.size() / 2]) /
             (object_number_mean_time[i] * teoretic_object_number_mean_time[object_numbers_.size() / 2]) );
         }
 
         std::cout<< "\nEstimates:\nn: \tq(n): \n";
-        for (int i = 0; i<object_numbers_.size(); ++i)
+        for (unsigned int i = 0; i<object_numbers_.size(); ++i)
         {
             std::cout << object_numbers_[i] << "\t" << estimates[i] << "\n";
         }
@@ -273,7 +273,7 @@ using namespace Knapsack;
                         {
                             mean_time = 0;
 
-                            for (int i=1; i<=instance_count; ++i)
+                            for (unsigned int i=1; i<=instance_count; ++i)
                             {
                                 //generate data
                                 auto data = TestDataGenerator::generate(object_numbers_[a], max_copy_numbers_[b], volume_ranges_[c], i, instance_count);
@@ -296,14 +296,14 @@ using namespace Knapsack;
 
         std::vector<double> estimates;
         //calculate how well the results fit the teoretical assumptions
-        for (int i = 0; i<object_numbers_.size(); ++i)
+        for (unsigned int i = 0; i<object_numbers_.size(); ++i)
         {
             estimates.push_back( (teoretic_object_number_mean_time[i] * object_number_mean_time[object_numbers_.size() / 2]) /
             (object_number_mean_time[i] * teoretic_object_number_mean_time[object_numbers_.size() / 2]) );
         }
 
         std::cout<< "\nEstimates:\nn: \tq(n): \n";
-        for (int i = 0; i<object_numbers_.size(); ++i)
+        for (unsigned int i = 0; i<object_numbers_.size(); ++i)
         {
             std::cout << object_numbers_[i] << "\t" << estimates[i] << "\n";
         }

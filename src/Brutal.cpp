@@ -36,9 +36,9 @@ const Solution& Brutal::getSolution() {
     return solution_;
 }
 
-void Brutal::generateVariation (int position, ValueType value, int volume, const int& object_count, const int& max_copies, ValueType& max_value, std::vector<unsigned int>& solution) {
+void Brutal::generateVariation (int position, ValueType value, VolumeType volume, const unsigned int& object_count, const unsigned int& max_copies, ValueType& max_value, std::vector<unsigned int>& solution) {
     //Go through all possible used copies number for this object
-    for (int i=0; i<=max_copies; ++i)
+    for (unsigned int i=0; i<=max_copies; ++i)
     {
         //Set used copies for this object
         solution[position] = i;
@@ -90,7 +90,7 @@ const Solution& Brutal::run(DataPointer data) {
     //prepare data for recursion
     solution_.getUsedCopies().resize(data->getObjectCount(), 0);
     solution_.setData(data);
-    ValueType max_value = -Data::MAX_VALUE_TYPE;
+    ValueType max_value = -Data::MIN_VALUE_TYPE;
     
     //run recursion generating variations and saving best found solutions
     generateVariation (data->getObjectCount() - 1, 0, 0, data->getObjectCount(), data->getMaxCopies(), max_value, solution_.getUsedCopies());
