@@ -10,6 +10,7 @@
 #define KNAPSACK_COMMAND_INTERPRETER_H
 
 #include <iostream>
+#include <ostream>
 #include <string>
 #include "TestModule.h"
 

@@ -17,6 +17,7 @@
  */
 int main(int argc, char * argv[])
 {
+    //check execution parameters
     if ( argc < 2 || (argc < 3 && (strcmp(argv[1], "-help")!=0)) ) {
         std::cout << "Please provide a known command. Type -help for more information.\n";
         return 1;
@@ -26,6 +27,7 @@ int main(int argc, char * argv[])
     std::string algorithm;
     if (argc>2) algorithm = std::string(argv[2]);
 
+    //run command
     Knapsack::CommandInterpreter::interprete(command, algorithm);
 
     return 0;

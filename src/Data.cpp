@@ -10,7 +10,7 @@
 
 using namespace Knapsack;
 
-static const ValueType MAX_VALUE_TYPE = FLT_MAX;
+const ValueType Data::MAX_VALUE_TYPE = FLT_MAX;
 
 Data::Data(): volume_(0), object_count_(0), max_copies_(0) {};
 
@@ -38,7 +38,7 @@ Data Data::operator=(Data&& other) {
     return *this;
 }
 
-std::ostream& operator<<(std::ostream& os, const Data& data) {
+std::ostream& Knapsack::operator<<(std::ostream& os, const Data& data) {
     os << "C: " << data.getVolume() << "\tm: " << data.getMaxCopies() << "\tn: " << data.getObjectCount() << "\npi: \tci: \n";
 
     std::for_each(data.getObjectsConst().begin(), data.getObjectsConst().end(), [&](const ObjectValues& object){ os << object.first << "\t" << object.second; });
@@ -46,7 +46,7 @@ std::ostream& operator<<(std::ostream& os, const Data& data) {
     return os;
 }
 
-void printBasicData(std::ostream& os, const Data& data) {
+void Knapsack::printBasicData(std::ostream& os, const Data& data) {
     os << "C: " << data.getVolume() << "\tm: " << data.getMaxCopies() << "\tn: " << data.getObjectCount() << "\n";
 }
 
@@ -114,4 +114,11 @@ ObjectValues& Data::getObject(int index){
 
 const ObjectValues& Data::getObjectConst(int index) const {
     return objects_.at(index);
+}
+
+void Data::clear() {
+    volume_ = 0;
+    object_count_ = 0;
+    max_copies_ = 0;
+    objects_.clear();
 }

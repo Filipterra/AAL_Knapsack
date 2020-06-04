@@ -40,8 +40,8 @@ Solution Solution::operator=(Solution&& other) {
     return *this;
 }
 
-std::ostream& operator<<(std::ostream& os, const Solution& solution) {
-    printBasicData(os, *(solution.getDataConst()));
+std::ostream& Knapsack::operator<<(std::ostream& os, const Solution& solution) {
+    Knapsack::printBasicData(os, *(solution.getDataConst()));
     os << "Value: " << solution.getValue() << "\t" << "Used volume: " << solution.getVolume() << "\npi: \tci: \tmi: \n";
 
     for (unsigned int i=0; i<solution.getDataConst()->getObjectCount(); ++i)

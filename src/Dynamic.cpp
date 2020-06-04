@@ -46,7 +46,7 @@ const Solution& Dynamic::run(DataPointer data) {
     //prepare data for the algorithm
     solution_.getUsedCopies().resize(data->getObjectCount(), 0);
     solution_.setData(data);
-    std::vector<Solution> best_solutions(data->getVolume(), Solution(data));
+    std::vector<Solution> best_solutions(data->getVolume()+1, Solution(data));
 
     //dynamic solution calculation
 
@@ -77,7 +77,7 @@ const Solution& Dynamic::run(DataPointer data) {
             }
     }
 
-
+    //solution for largest checked knapsack is the solution to original problem
     solution_ = *(best_solutions.end() - 1);
 
     return solution_;

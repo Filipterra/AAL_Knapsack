@@ -232,6 +232,12 @@ namespace Knapsack {
          */
         const ObjectValues& getObjectConst(int index) const;
 
+        /**
+         * @brief clear data
+         * 
+         */
+        void clear();
+
     };
 
     using DataPointer = std::shared_ptr<Data>;

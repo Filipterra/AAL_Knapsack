@@ -55,7 +55,7 @@ namespace Knapsack {
      * @brief Construct a new TestModule object with given test parameters
      * 
      */
-    TestModule(std::initializer_list<unsigned int> object_numbers = {50, 100, 200, 500, 1000, 2000}, 
+    TestModule(std::initializer_list<unsigned int> object_numbers = {20, 50, 100, 200, 500, 1000, 2000}, 
     std::initializer_list<unsigned int> max_copy_numbers = {2, 3, 5}, std::initializer_list<VolumeType> volume_ranges = {1000, 10000});
 
     /**
@@ -186,7 +186,7 @@ namespace Knapsack {
      * @param max_copies max number of copies of each object
      * @param volume_range range for volume randomization
      */
-    template <Algorithm algorithm = Algorithm::DYNAMIC> void run(unsigned int object_count, unsigned int max_copies, VolumeType volume_range);
+    template <Algorithm algorithm = Algorithm::DYNAMIC> static void run(unsigned int object_count, unsigned int max_copies, VolumeType volume_range);
 
     /**
      * @brief Run one test, measure time and print results.
@@ -194,7 +194,7 @@ namespace Knapsack {
      * @tparam Algorithm choose solving algorithm
      * @param data problem data
      */
-    template <Algorithm algorithm = Algorithm::DYNAMIC> void run(DataPointer data);
+    template <Algorithm algorithm = Algorithm::DYNAMIC> static void run(DataPointer data);
 
     /**
      * @brief Run tests for each combination of hold values instance_count times, measure mean time and print results.

@@ -10,6 +10,7 @@
 #define KNAPSACK_BRUTAL_H
 
 #include "Solution.h"
+#include "Data.h"
 
 namespace Knapsack {
 

@@ -91,62 +91,102 @@ using namespace Knapsack;
         std::sort(volume_ranges_.begin(), volume_ranges_.end());
     }
 
-    template<> void TestModule::run<Algorithm::DYNAMIC>(unsigned int object_count, unsigned int max_copies, VolumeType volume_range) {
+    template<> static void TestModule::run<Algorithm::DYNAMIC>(unsigned int object_count, unsigned int max_copies, VolumeType volume_range) {
 
+        //generate data instance
         auto data = TestDataGenerator::generate(object_count, max_copies, volume_range, 1, 1);
         Dynamic solver = Dynamic();
 
         auto start_time = std::chrono::steady_clock::now();
 
-        Solution solution = solver.run(data);
+        Solution solution;
+
+        //solve problem
+        try {
+        solution = solver.run(data);
+        }
+        catch (std::invalid_argument exception) {
+            std::cout << exception.what();
+            return;
+        }
 
         auto end_time = std::chrono::steady_clock::now();
+        //calculate time
 	    auto time_duration = std::chrono::duration_cast<std::chrono::nanoseconds>(end_time - start_time).count();
 
         std::cout << "Time: " << time_duration << "\n";
         std::cout << solution;
     }
 
-    template<> void TestModule::run<Algorithm::BRUTAL>(unsigned int object_count, unsigned int max_copies, VolumeType volume_range) {
-
+    template<> static void TestModule::run<Algorithm::BRUTAL>(unsigned int object_count, unsigned int max_copies, VolumeType volume_range) {
+        
+        //generate data instance
         auto data = TestDataGenerator::generate(object_count, max_copies, volume_range, 1, 1);
         Brutal solver = Brutal();
 
         auto start_time = std::chrono::steady_clock::now();
 
-        Solution solution = solver.run(data);
+        Solution solution;
+
+        //solve problem
+        try {
+        solution = solver.run(data);
+        }
+        catch (std::invalid_argument exception) {
+            std::cout << exception.what();
+            return;
+        }
 
         auto end_time = std::chrono::steady_clock::now();
+        //calculate time
 	    auto time_duration = std::chrono::duration_cast<std::chrono::nanoseconds>(end_time - start_time).count();
 
         std::cout << "Time: " << time_duration << "\n";
         std::cout << solution;
     }
 
-    template<> void TestModule::run<Algorithm::DYNAMIC>(DataPointer data) {
-
+    template<> static void TestModule::run<Algorithm::DYNAMIC>(DataPointer data) {
+        
         Dynamic solver = Dynamic();
-
+        
         auto start_time = std::chrono::steady_clock::now();
-
-        Solution solution = solver.run(data);
-
+        Solution solution;
+        
+        //solve problem
+        try {
+        solution = solver.run(data);
+        }
+        catch (std::invalid_argument exception) {
+            std::cout << exception.what();
+            return;
+        }
+        
         auto end_time = std::chrono::steady_clock::now();
+        //calculate time
 	    auto time_duration = std::chrono::duration_cast<std::chrono::nanoseconds>(end_time - start_time).count();
-
+        
         std::cout << "Time: " << time_duration << "\n";
         std::cout << solution;
     }
 
-    template<> void TestModule::run<Algorithm::BRUTAL>(DataPointer data) {
-
+    template<> static void TestModule::run<Algorithm::BRUTAL>(DataPointer data) {
+        
         Brutal solver = Brutal();
 
         auto start_time = std::chrono::steady_clock::now();
+        Solution solution;
 
-        Solution solution = solver.run(data);
+        //solve problem
+        try {
+        solution = solver.run(data);
+        }
+        catch (std::invalid_argument exception) {
+            std::cout << exception.what();
+            return;
+        }
 
         auto end_time = std::chrono::steady_clock::now();
+        //calculate time
 	    auto time_duration = std::chrono::duration_cast<std::chrono::nanoseconds>(end_time - start_time).count();
 
         std::cout << "Time: " << time_duration << "\n";
@@ -154,7 +194,8 @@ using namespace Knapsack;
     }
 
     template<> void TestModule::runBatch<Algorithm::DYNAMIC>(unsigned int instance_count) {
-        //TODO: save to file?
+
+        //sort for median search
         std::sort(object_numbers_.begin(), object_numbers_.end());
         long long mean_time = 0, mean_teoretic_time = 0;
         unsigned int combinations = max_copy_numbers_.size() * volume_ranges_.size();
@@ -163,6 +204,7 @@ using namespace Knapsack;
 
         Dynamic solver = Dynamic();
 
+        //check every parameter combination
         for (unsigned int a = 0; a<object_numbers_.size(); ++a)
         {
             for (unsigned int b = 0; b<max_copy_numbers_.size(); ++b)
@@ -171,19 +213,25 @@ using namespace Knapsack;
                         {
                             mean_time = 0;
                             mean_teoretic_time = 0;
-                            for (int i=0; i<instance_count; ++i)
+                            for (int i=1; i<=instance_count; ++i)
                             {
+                                //generate data
                                 auto data = TestDataGenerator::generate(object_numbers_[a], max_copy_numbers_[b], volume_ranges_[c], i, instance_count);
                                 auto start_time = std::chrono::steady_clock::now();
+                                //solve problem (without exception catching)
                                 solver.run(data);
                                 auto end_time = std::chrono::steady_clock::now();
+                                //instance execution time
                                 mean_time += std::chrono::duration_cast<std::chrono::nanoseconds>(end_time - start_time).count() / instance_count;
+                                //instance teoretic time
                                 mean_teoretic_time += teoreticDynamic(object_numbers_[a], data->getVolume()) / instance_count;
                             }
 
                             std::cout<< "Objects: " << object_numbers_[a] << "\tCopies: " << max_copy_numbers_[b] << "\tRange: " << volume_ranges_[c] << "\tTime: " << mean_time << "\n";
                         
+                            //combination execution time
                             object_number_mean_time[a] += mean_time / combinations;
+                            //combination teoretic time
                             teoretic_object_number_mean_time[a] += mean_teoretic_time / combinations;
                         }
                 }
@@ -206,7 +254,8 @@ using namespace Knapsack;
     }
 
     template<> void TestModule::runBatch<Algorithm::BRUTAL>(unsigned int instance_count) {
-        //TODO: save to file?
+
+        //sort for median search
         std::sort(object_numbers_.begin(), object_numbers_.end());
         long long mean_time = 0;
         unsigned int combinations = max_copy_numbers_.size() * volume_ranges_.size();
@@ -215,6 +264,7 @@ using namespace Knapsack;
         
         Brutal solver = Brutal();
 
+        //check every parameter combination
         for (unsigned int a = 0; a<object_numbers_.size(); ++a)
         {
             for (unsigned int b = 0; b<max_copy_numbers_.size(); ++b)
@@ -223,20 +273,23 @@ using namespace Knapsack;
                         {
                             mean_time = 0;
 
-                            for (int i=0; i<instance_count; ++i)
+                            for (int i=1; i<=instance_count; ++i)
                             {
+                                //generate data
                                 auto data = TestDataGenerator::generate(object_numbers_[a], max_copy_numbers_[b], volume_ranges_[c], i, instance_count);
                                 auto start_time = std::chrono::steady_clock::now();
+                                //solve problem (without exception catching)
                                 solver.run(data);
                                 auto end_time = std::chrono::steady_clock::now();
+                                //instance execution time
                                 mean_time += std::chrono::duration_cast<std::chrono::nanoseconds>(end_time - start_time).count() / instance_count;
-
                             }
 
                             std::cout<< "Objects: " << object_numbers_[a] << "\tCopies: " << max_copy_numbers_[b] << "\tRange: " << volume_ranges_[c] << "\tTime: " << mean_time << "\n";
-
+                            //combination execution time
                             object_number_mean_time[a] += mean_time / combinations;
                         }
+                    //combination teoretic time
                     teoretic_object_number_mean_time[a] += teoreticBrutal(object_numbers_[a], max_copy_numbers_[b]) / max_copy_numbers_.size();
                 }
         }

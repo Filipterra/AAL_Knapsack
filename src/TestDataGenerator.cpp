@@ -7,10 +7,11 @@
  */
 
 #include "TestDataGenerator.h"
+#include <iostream>
 
 using namespace Knapsack;
 
-DataPointer TestDataGenerator::generate(int object_count, int max_copies, VolumeType volume_range, int instance, int instance_count) {
+DataPointer TestDataGenerator::generate(int object_count, int max_copies, VolumeType volume_range, unsigned int instance, unsigned int instance_count) {
 
     DataPointer data = std::make_shared<Data>();
     
@@ -20,17 +21,19 @@ DataPointer TestDataGenerator::generate(int object_count, int max_copies, Volume
 
     ValueType value = 0;
     VolumeType volume = 0, volume_sum = 0; 
+    //randomize object values
     for (int i=0; i< object_count; ++i)
     {
-        volume = (rand() % volume_range) + 1;
-        value = volume + volume_range/10;
+        volume = (rand() % volume_range) + 1; //random volume
+        value = volume + volume_range/10; //value strongly correlated with volume
 
         data->addObject(value, volume);
 
         volume_sum += volume * max_copies;
     }
 
-    data->setVolume( (instance/(instance_count+1) ) * volume_sum);
+    //knapsack volume calculated based on sum of volumes and number of data instances generated in batch
+    data->setVolume( (static_cast<double>(instance) / static_cast<double>((instance_count+1))) * volume_sum);
 
     return data;
 }

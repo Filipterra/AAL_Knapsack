@@ -52,16 +52,7 @@ void Brutal::generateVariation (int position, ValueType value, int volume, const
         
         //Early end to this branch of recursion
         if (volume>solution_.getData()->getVolume())
-        {
-            //Check if found solution is better than the last
-            if (value > max_value)
-            {
-                max_value = value;
-                solution_.setUsedCopies(solution);
-                solution_.setValue(value);
-                solution_.setVolume(volume);
-            }
-            
+        {   
             break;
         }
             
