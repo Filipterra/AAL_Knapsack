@@ -104,15 +104,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:add791c14c8066aac6fb02eea3876b348"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_knapsack_1_1_solution.html">Solution</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knapsack_1_1_brutal.html#add791c14c8066aac6fb02eea3876b348">getSolution</a> ()</td></tr>
 <tr class="memdesc:add791c14c8066aac6fb02eea3876b348"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the const <a class="el" href="class_knapsack_1_1_solution.html" title="Solution class.">Solution</a> object.  <a href="class_knapsack_1_1_brutal.html#add791c14c8066aac6fb02eea3876b348">More...</a><br /></td></tr>
 <tr class="separator:add791c14c8066aac6fb02eea3876b348"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f0da82b0dcb5cbef7e1e7617484fb6e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_knapsack_1_1_solution.html">Solution</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knapsack_1_1_brutal.html#a3f0da82b0dcb5cbef7e1e7617484fb6e">run</a> (DataPointer data)  throw (std::invalid_argument)</td></tr>
+<tr class="memitem:a3f0da82b0dcb5cbef7e1e7617484fb6e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_knapsack_1_1_solution.html">Solution</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knapsack_1_1_brutal.html#a3f0da82b0dcb5cbef7e1e7617484fb6e">run</a> (DataPointer data)</td></tr>
 <tr class="memdesc:a3f0da82b0dcb5cbef7e1e7617484fb6e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_knapsack_1_1_brutal.html" title="Class for brutal solution of the Knapsack problem.">Brutal</a> <a class="el" href="namespace_knapsack.html" title="Namespace for Knapsack project objects.">Knapsack</a> solving algorithm.  <a href="class_knapsack_1_1_brutal.html#a3f0da82b0dcb5cbef7e1e7617484fb6e">More...</a><br /></td></tr>
 <tr class="separator:a3f0da82b0dcb5cbef7e1e7617484fb6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:aa116effd6ace5c725a02044deea97d5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knapsack_1_1_brutal.html#aa116effd6ace5c725a02044deea97d5d">generateVariation</a> (int position, ValueType value, int volume, const int &amp;object_count, const int &amp;max_copies, ValueType &amp;max_value, std::vector&lt; unsigned int &gt; &amp;solution)</td></tr>
-<tr class="memdesc:aa116effd6ace5c725a02044deea97d5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursive generation of variations of number of used objects and saving best found solution in solution_. Used in <a class="el" href="class_knapsack_1_1_brutal.html#a3f0da82b0dcb5cbef7e1e7617484fb6e" title="Brutal Knapsack solving algorithm.">Brutal::run</a>. Doesn't check parameters validity.  <a href="class_knapsack_1_1_brutal.html#aa116effd6ace5c725a02044deea97d5d">More...</a><br /></td></tr>
-<tr class="separator:aa116effd6ace5c725a02044deea97d5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa13741966c223597e892cbd0956ed9bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knapsack_1_1_brutal.html#aa13741966c223597e892cbd0956ed9bf">generateVariation</a> (int position, ValueType value, VolumeType volume, const unsigned int &amp;object_count, const unsigned int &amp;max_copies, ValueType &amp;max_value, std::vector&lt; unsigned int &gt; &amp;solution)</td></tr>
+<tr class="memdesc:aa13741966c223597e892cbd0956ed9bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursive generation of variations of number of used objects and saving best found solution in solution_. Used in <a class="el" href="class_knapsack_1_1_brutal.html#a3f0da82b0dcb5cbef7e1e7617484fb6e" title="Brutal Knapsack solving algorithm.">Brutal::run</a>. Doesn't check parameters validity.  <a href="class_knapsack_1_1_brutal.html#aa13741966c223597e892cbd0956ed9bf">More...</a><br /></td></tr>
+<tr class="separator:aa13741966c223597e892cbd0956ed9bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -214,8 +214,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa116effd6ace5c725a02044deea97d5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa116effd6ace5c725a02044deea97d5d">&#9670;&nbsp;</a></span>generateVariation()</h2>
+<a id="aa13741966c223597e892cbd0956ed9bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa13741966c223597e892cbd0956ed9bf">&#9670;&nbsp;</a></span>generateVariation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -238,19 +238,19 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">VolumeType&#160;</td>
           <td class="paramname"><em>volume</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
           <td class="paramname"><em>object_count</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
           <td class="paramname"><em>max_copies</em>, </td>
         </tr>
         <tr>
@@ -380,12 +380,6 @@ Private Attributes</h2></td></tr>
           <td class="paramtype">DataPointer&#160;</td>
           <td class="paramname"><em>data</em></td><td>)</td>
           <td></td>
-        </tr>
-        <tr>
-          <td align="right">throw </td><td>(</td><td colspan="2">std::invalid_argument</td>
-        </tr>
-        <tr>
-          <td align="right"></td><td>)</td><td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

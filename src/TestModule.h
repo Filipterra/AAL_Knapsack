@@ -55,8 +55,8 @@ namespace Knapsack {
      * @brief Construct a new TestModule object with given test parameters
      * 
      */
-    TestModule(std::initializer_list<unsigned int> object_numbers = {20, 50, 100, 200, 500, 1000, 2000}, 
-    std::initializer_list<unsigned int> max_copy_numbers = {2, 3, 5}, std::initializer_list<VolumeType> volume_ranges = {1000, 10000});
+    TestModule(std::initializer_list<unsigned int> object_numbers = {5, 10, 15, 20}, 
+    std::initializer_list<unsigned int> max_copy_numbers = {2, 3}, std::initializer_list<VolumeType> volume_ranges = {1000, 10000});
 
     /**
      * @brief Construct a new TestModule object copying from another
@@ -202,7 +202,7 @@ namespace Knapsack {
      * @tparam Algorithm choose solving algorithm
      * @param instance_count number of times each test is repeated with different data
      */
-    template <Algorithm algorithm = Algorithm::DYNAMIC> void runBatch(unsigned int instance_count = 100);
+    template <Algorithm algorithm = Algorithm::DYNAMIC> void runBatch(unsigned int instance_count = 10);
 
     /**
      * @brief helper function for calculating teoretical complexity of the brutal algorithm

@@ -1,0 +1,38 @@
+Objects: 6	Copies: 1	Range: 1000	Time: 2740
+Objects: 6	Copies: 1	Range: 10000	Time: 2660
+Objects: 6	Copies: 2	Range: 1000	Time: 19420
+Objects: 6	Copies: 2	Range: 10000	Time: 21180
+Objects: 8	Copies: 1	Range: 1000	Time: 8920
+Objects: 8	Copies: 1	Range: 10000	Time: 9420
+Objects: 8	Copies: 2	Range: 1000	Time: 180580
+Objects: 8	Copies: 2	Range: 10000	Time: 181860
+Objects: 10	Copies: 1	Range: 1000	Time: 34420
+Objects: 10	Copies: 1	Range: 10000	Time: 35500
+Objects: 10	Copies: 2	Range: 1000	Time: 1549200
+Objects: 10	Copies: 2	Range: 10000	Time: 1575140
+Objects: 12	Copies: 1	Range: 1000	Time: 134600
+Objects: 12	Copies: 1	Range: 10000	Time: 152120
+Objects: 12	Copies: 2	Range: 1000	Time: 13901000
+Objects: 12	Copies: 2	Range: 10000	Time: 15557560
+Objects: 14	Copies: 1	Range: 1000	Time: 513080
+Objects: 14	Copies: 1	Range: 10000	Time: 538980
+Objects: 14	Copies: 2	Range: 1000	Time: 124517400
+Objects: 14	Copies: 2	Range: 10000	Time: 131094100
+Objects: 16	Copies: 1	Range: 1000	Time: 2032520
+Objects: 16	Copies: 1	Range: 10000	Time: 2050500
+Objects: 16	Copies: 2	Range: 1000	Time: 1220847700
+Objects: 16	Copies: 2	Range: 10000	Time: 1195684360
+Objects: 18	Copies: 1	Range: 1000	Time: 9042580
+Objects: 18	Copies: 1	Range: 10000	Time: 8764420
+Objects: 18	Copies: 2	Range: 1000	Time: 10627284960
+Objects: 18	Copies: 2	Range: 10000	Time: 10490622400
+
+Estimates:
+n: 	q(n): 
+6	0.956306
+8	0.994225
+10	1.04455
+12	1
+14	1.0386
+16	0.989246
+18	1.0188

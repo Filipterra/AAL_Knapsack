@@ -1,0 +1,14 @@
+Objects: 5	Copies: 2	Range: 1000	Time: 8570
+Objects: 5	Copies: 2	Range: 10000	Time: 7360
+Objects: 5	Copies: 3	Range: 1000	Time: 30190
+Objects: 5	Copies: 3	Range: 10000	Time: 27140
+Objects: 10	Copies: 2	Range: 1000	Time: 1644700
+Objects: 10	Copies: 2	Range: 10000	Time: 1565510
+Objects: 10	Copies: 3	Range: 1000	Time: 29605180
+Objects: 10	Copies: 3	Range: 10000	Time: 26686390
+Objects: 15	Copies: 2	Range: 1000	Time: 394686750
+Objects: 15	Copies: 2	Range: 10000	Time: 392681230
+Objects: 15	Copies: 3	Range: 1000	Time: 26814297420
+Objects: 15	Copies: 3	Range: 10000	Time: 27321297870
+Objects: 20	Copies: 2	Range: 1000	Time: 100917549160
+Objects: 20	Copies: 2	Range: 10000	Time: 94229678250

@@ -241,8 +241,8 @@ using namespace Knapsack;
         //calculate how well the results fit the teoretical assumptions
         for (unsigned int i = 0; i<object_numbers_.size(); ++i)
         {
-            estimates.push_back( (teoretic_object_number_mean_time[i] * object_number_mean_time[object_numbers_.size() / 2]) /
-            (object_number_mean_time[i] * teoretic_object_number_mean_time[object_numbers_.size() / 2]) );
+            estimates.push_back( (static_cast<double>(teoretic_object_number_mean_time[i]) * object_number_mean_time[object_numbers_.size() / 2]) /
+            (object_number_mean_time[i] * static_cast<double>(teoretic_object_number_mean_time[object_numbers_.size() / 2])) );
         }
 
         std::cout<< "\nEstimates:\nn: \tq(n): \n";
@@ -298,8 +298,8 @@ using namespace Knapsack;
         //calculate how well the results fit the teoretical assumptions
         for (unsigned int i = 0; i<object_numbers_.size(); ++i)
         {
-            estimates.push_back( (teoretic_object_number_mean_time[i] * object_number_mean_time[object_numbers_.size() / 2]) /
-            (object_number_mean_time[i] * teoretic_object_number_mean_time[object_numbers_.size() / 2]) );
+            estimates.push_back( (static_cast<double>(teoretic_object_number_mean_time[i]) * object_number_mean_time[object_numbers_.size() / 2]) /
+            (object_number_mean_time[i] * static_cast<double>(teoretic_object_number_mean_time[object_numbers_.size() / 2])) );
         }
 
         std::cout<< "\nEstimates:\nn: \tq(n): \n";

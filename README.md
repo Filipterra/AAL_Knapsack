@@ -4,8 +4,9 @@
 Porównanie prostych algorytmów rozwiązywania problemu plecakowego z ograniczoną liczbą przedmiotów: brutalnego i prostego dynamicznego.
 
 Implementacja w C++.
-Opis projektu w "Koncepcji".
-Opis programu w dokumentacji (folder doc).
+Opis projektu w pliku "Problem_Plecakowy_Dokumentacja.pdf".
+Opis programu w dokumentacji doxygen w folderze "doc".
+Wyniki przykładowych pomiarów w folderze "test".
 
 
 Istrukcja:
@@ -27,3 +28,7 @@ Knapsack -help
 Knapsack -run -<algorithm> -- w następnej linii wartości: pojemność plecaka, ilość obiektów, maksymalna liczba kopii; następnie pary wartości obiektu i jego wagi
 Knapsack -generate -<algorithm> -- w następnej linii parametry generatora: ilość obiektów, maksymalna liczba kopii, maksymalna waga obiektu
 Knapsack -test -<algorithm>
+
+
+Uwaga! Metoda "-test" może działać dłuższy czas i wymagać sporo pamięci.
+Parametry wykonania dla "-run" i "-generate" też zaleca się dobierać z umiarem.

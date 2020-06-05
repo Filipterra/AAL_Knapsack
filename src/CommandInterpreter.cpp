@@ -99,14 +99,14 @@ template<> void CommandInterpreter::runCommand<Commands::GENERATE, Algorithm::DY
 
 template<> void CommandInterpreter::runCommand<Commands::TEST, Algorithm::BRUTAL>() {
 
-    TestModule test_module = TestModule();
-    test_module.runBatch<Algorithm::BRUTAL>();
+    TestModule test_module = TestModule({6, 8, 10, 12, 14, 16, 18}, {1, 2});
+    test_module.runBatch<Algorithm::BRUTAL>(5);
 }
 
 template<> void CommandInterpreter::runCommand<Commands::TEST, Algorithm::DYNAMIC>() {
 
-    TestModule test_module = TestModule();
-    test_module.runBatch<Algorithm::DYNAMIC>();
+    TestModule test_module = TestModule({20, 30, 40, 50, 60, 70, 80, 90, 100}, {1, 2, 3, 5});
+    test_module.runBatch<Algorithm::DYNAMIC>(20);
 }
 
 void CommandInterpreter::interprete (std::string command, std::string algorithm) {

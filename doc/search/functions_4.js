@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['generate_120',['generate',['../class_knapsack_1_1_test_data_generator.html#ada8fdbf31a06772b6320c2f9ab3dbdc3',1,'Knapsack::TestDataGenerator']]],
-  ['generatevariation_121',['generateVariation',['../class_knapsack_1_1_brutal.html#aa116effd6ace5c725a02044deea97d5d',1,'Knapsack::Brutal']]],
+  ['generate_120',['generate',['../class_knapsack_1_1_test_data_generator.html#a456f0a742379ca55ca6b5c122e8ebad5',1,'Knapsack::TestDataGenerator']]],
+  ['generatevariation_121',['generateVariation',['../class_knapsack_1_1_brutal.html#aa13741966c223597e892cbd0956ed9bf',1,'Knapsack::Brutal']]],
   ['getdata_122',['getData',['../class_knapsack_1_1_solution.html#a1e9478fee1a75c82b408f44754f42d96',1,'Knapsack::Solution']]],
   ['getdataconst_123',['getDataConst',['../class_knapsack_1_1_solution.html#af7f1fb381cf4a3cf7884e0431dff84e3',1,'Knapsack::Solution']]],
   ['getmaxcopies_124',['getMaxCopies',['../class_knapsack_1_1_data.html#a2173fa5321b0edf233a427529facb11c',1,'Knapsack::Data']]],

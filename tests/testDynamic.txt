@@ -1,0 +1,84 @@
+Objects: 20	Copies: 1	Range: 1000	Time: 2472620
+Objects: 20	Copies: 1	Range: 10000	Time: 25024296
+Objects: 20	Copies: 2	Range: 1000	Time: 4861368
+Objects: 20	Copies: 2	Range: 10000	Time: 52639556
+Objects: 20	Copies: 3	Range: 1000	Time: 8408884
+Objects: 20	Copies: 3	Range: 10000	Time: 72975840
+Objects: 20	Copies: 5	Range: 1000	Time: 13958048
+Objects: 20	Copies: 5	Range: 10000	Time: 154049852
+Objects: 30	Copies: 1	Range: 1000	Time: 5453712
+Objects: 30	Copies: 1	Range: 10000	Time: 52629476
+Objects: 30	Copies: 2	Range: 1000	Time: 10063268
+Objects: 30	Copies: 2	Range: 10000	Time: 104952136
+Objects: 30	Copies: 3	Range: 1000	Time: 18740712
+Objects: 30	Copies: 3	Range: 10000	Time: 184196564
+Objects: 30	Copies: 5	Range: 1000	Time: 27134024
+Objects: 30	Copies: 5	Range: 10000	Time: 295002376
+Objects: 40	Copies: 1	Range: 1000	Time: 10578048
+Objects: 40	Copies: 1	Range: 10000	Time: 101851332
+Objects: 40	Copies: 2	Range: 1000	Time: 19462864
+Objects: 40	Copies: 2	Range: 10000	Time: 186278752
+Objects: 40	Copies: 3	Range: 1000	Time: 25253152
+Objects: 40	Copies: 3	Range: 10000	Time: 285593872
+Objects: 40	Copies: 5	Range: 1000	Time: 44868660
+Objects: 40	Copies: 5	Range: 10000	Time: 516265332
+Objects: 50	Copies: 1	Range: 1000	Time: 13937596
+Objects: 50	Copies: 1	Range: 10000	Time: 136868712
+Objects: 50	Copies: 2	Range: 1000	Time: 24727532
+Objects: 50	Copies: 2	Range: 10000	Time: 290000536
+Objects: 50	Copies: 3	Range: 1000	Time: 38677328
+Objects: 50	Copies: 3	Range: 10000	Time: 444965976
+Objects: 50	Copies: 5	Range: 1000	Time: 69552460
+Objects: 50	Copies: 5	Range: 10000	Time: 760718184
+Objects: 60	Copies: 1	Range: 1000	Time: 16576100
+Objects: 60	Copies: 1	Range: 10000	Time: 206375628
+Objects: 60	Copies: 2	Range: 1000	Time: 37865332
+Objects: 60	Copies: 2	Range: 10000	Time: 419214292
+Objects: 60	Copies: 3	Range: 1000	Time: 55536376
+Objects: 60	Copies: 3	Range: 10000	Time: 627358208
+Objects: 60	Copies: 5	Range: 1000	Time: 103637640
+Objects: 60	Copies: 5	Range: 10000	Time: 1095366052
+Objects: 70	Copies: 1	Range: 1000	Time: 22759376
+Objects: 70	Copies: 1	Range: 10000	Time: 287954268
+Objects: 70	Copies: 2	Range: 1000	Time: 44368504
+Objects: 70	Copies: 2	Range: 10000	Time: 577227700
+Objects: 70	Copies: 3	Range: 1000	Time: 70048960
+Objects: 70	Copies: 3	Range: 10000	Time: 890558144
+Objects: 70	Copies: 5	Range: 1000	Time: 117134312
+Objects: 70	Copies: 5	Range: 10000	Time: 1498475660
+Objects: 80	Copies: 1	Range: 1000	Time: 31206208
+Objects: 80	Copies: 1	Range: 10000	Time: 361676188
+Objects: 80	Copies: 2	Range: 1000	Time: 61062856
+Objects: 80	Copies: 2	Range: 10000	Time: 779644424
+Objects: 80	Copies: 3	Range: 1000	Time: 93427020
+Objects: 80	Copies: 3	Range: 10000	Time: 1223660064
+Objects: 80	Copies: 5	Range: 1000	Time: 152139292
+Objects: 80	Copies: 5	Range: 10000	Time: 2000021712
+Objects: 90	Copies: 1	Range: 1000	Time: 40777212
+Objects: 90	Copies: 1	Range: 10000	Time: 494882548
+Objects: 90	Copies: 2	Range: 1000	Time: 75164400
+Objects: 90	Copies: 2	Range: 10000	Time: 1000249440
+Objects: 90	Copies: 3	Range: 1000	Time: 114235664
+Objects: 90	Copies: 3	Range: 10000	Time: 1487905472
+Objects: 90	Copies: 5	Range: 1000	Time: 193759952
+Objects: 90	Copies: 5	Range: 10000	Time: 2717918324
+Objects: 100	Copies: 1	Range: 1000	Time: 48952548
+Objects: 100	Copies: 1	Range: 10000	Time: 610770732
+Objects: 100	Copies: 2	Range: 1000	Time: 97930264
+Objects: 100	Copies: 2	Range: 10000	Time: 1259939464
+Objects: 100	Copies: 3	Range: 1000	Time: 147752660
+Objects: 100	Copies: 3	Range: 10000	Time: 1978170676
+Objects: 100	Copies: 5	Range: 1000	Time: 243503492
+Objects: 100	Copies: 5	Range: 10000	Time: 3314361476
+
+Estimates:
+n: 	q(n): 
+20	0.866762
+30	0.963737
+40	0.959901
+50	1.00947
+60	1
+70	1.01071
+80	0.990495
+90	0.971825
+100	0.961141
